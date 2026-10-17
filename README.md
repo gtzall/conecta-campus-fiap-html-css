@@ -63,6 +63,6 @@ As áreas acima foram informadas pelo grupo e não representam tecnologias usada
 - [FIAP — Ampliação do campus, 28 jun. 2012](https://www.fiap.com.br/imprensa/fiap-inaugura-novo-campus-na-avenida-paulista/)
 - [Plano de Garantia de Acessibilidade da FIAP](https://www.fiap.com.br/wp-content/themes/fiap2016/documents/fiap/informacoes-academicas/politicas-institucionais/PLANO%20DE%20GARANTIA%20DE%20ACESSIBILIDADE.pdf)
 
-## Histórico e entrega
+## Entrega
 
-Este repositório começa com um único commit de importação do snapshot do site. Isso não substitui a exigência acadêmica de pelo menos 20 commits reais e dois commits feitos por cada integrante em sua própria conta; a equipe ainda precisa registrar contribuições substantivas, sem dividir alterações artificialmente. Por ser privado, a rubrica também pede conceder acesso ao professor `alecarlosjesus`; confirme essa permissão antes da entrega. O líder envia `cp2.txt` no Teams.
+Este repositório contém uma cópia limpa do site; o histórico do repositório anterior não foi reescrito. A atividade exige pelo menos 20 commits reais e dois commits feitos por cada integrante em sua própria conta. A importação dos arquivos não substitui as contribuições dos colegas: cada pessoa deve registrar mudanças substantivas com sua conta, sem fragmentar alterações artificialmente. Por ser privado, a rubrica também pede conceder acesso ao professor `alecarlosjesus`; confirme essa permissão antes da entrega. O líder envia `cp2.txt` no Teams.
