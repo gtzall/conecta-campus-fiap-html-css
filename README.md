@@ -6,26 +6,28 @@
 - Unidade: **FIAP Paulista — Av. Paulista, 1106, São Paulo/SP**
 - O site não está publicado. Para visualizar, abra `index.html` no navegador.
 
-## Sobre
+## Sobre o projeto
 
-O Conecta Campus é um guia estudantil da unidade FIAP Paulista, com informações sobre locais, detalhes dos espaços e integrantes da equipe. O site é estático e usa **HTML e CSS**, sem Python, JavaScript, framework, backend ou banco de dados.
+O Conecta Campus é um guia estudantil da unidade FIAP Paulista, com informações sobre espaços, acessibilidade e integrantes. O site é estático e feito somente com **HTML e CSS**: não usa Python, JavaScript, frameworks, backend ou banco de dados.
+
+A página inicial usa fotos locais em um mosaico de diferentes proporções e opacidades. O androide é uma ilustração decorativa enviada pelo grupo, não um equipamento real da FIAP. Algumas bordas são arredondadas e outras retas, mantendo o fundo contínuo.
 
 ## Páginas
 
-- `index.html` — apresentação e destaques.
-- `locais.html` — diretório de espaços, com categoria, localização, informação útil, imagem e link.
-- `detalhes.html` — informações sobre espaços, acessibilidade e fontes, com atalhos internos.
-- `integrantes.html` — fotos, RMs, turma, papéis e perfis dos integrantes.
+- `index.html` — apresentação e destaques do campus.
+- `locais.html` — diretório com categoria, localização, informação útil, imagem e link.
+- `detalhes.html` — informações sobre os espaços, acessibilidade e fontes, com atalhos internos.
+- `integrantes.html` — fotos, RMs, turma, áreas informadas e perfis sociais.
 
 ## Capturas
 
 | Início | Locais |
 | --- | --- |
-| ![Página inicial](docs/prints/inicio.png) | ![Lista de locais](docs/prints/locais.png) |
+| ![Página inicial do Conecta Campus](docs/prints/inicio.png) | ![Lista de locais da FIAP Paulista](docs/prints/locais.png) |
 
 | Detalhes | Integrantes |
 | --- | --- |
-| ![Página de detalhes](docs/prints/detalhes.png) | ![Página da equipe](docs/prints/integrantes.png) |
+| ![Detalhes dos espaços](docs/prints/detalhes.png) | ![Página dos integrantes](docs/prints/integrantes.png) |
 
 ## Estrutura
 
@@ -37,12 +39,13 @@ conecta-campus-fiap-html-css/
 ├── integrantes.html
 ├── cp2.txt
 ├── README.md
-├── css/style.css
-├── img/                  # Imagens e fotos usadas no site
-├── fonts/                # Roboto e licença
+├── css/
+│   └── style.css
+├── img/                 # Imagens e fotos locais do site
+├── fonts/               # Roboto e licença
 └── docs/
-    ├── equipe/           # Miniaturas da tabela deste README
-    └── prints/           # Capturas das páginas
+    ├── equipe/          # Miniaturas usadas na tabela abaixo
+    └── prints/          # Capturas usadas neste README
 ```
 
 ## Integrantes
@@ -54,17 +57,15 @@ conecta-campus-fiap-html-css/
 | ![Moises Alciati](docs/equipe/moises-alciati.png) | Moises Alciati | 575893 | 1TDSPB | Banco de dados | [GitHub](https://github.com/moisesalciati) · [LinkedIn](https://www.linkedin.com/in/moises-de-oliveira-alciati-08a944441) |
 | ![Claudio Augusto Silva de Assis](docs/equipe/claudio-augusto-silva-de-assis.png) | Claudio Augusto Silva de Assis | 576661 | 1TDSPB | Python, IA e chatbot | [GitHub](https://github.com/claudiosilva06) · [LinkedIn](https://www.linkedin.com/in/claudio-augusto-b7660a433) |
 
-As áreas acima foram informadas pelo grupo e não representam tecnologias usadas pelo site. Endereço e horário vêm do contato oficial da FIAP; alguns dados de espaços são de publicações de 2012 e estão marcados como históricos. As fotos dos espaços e da equipe foram fornecidas pelo grupo. A Roboto local inclui a licença em `fonts/roboto-ofl.txt`.
-
-A abertura combina três fotografias em um mosaico com larguras e opacidades diferentes. Os cantos alternam entre retos e arredondados, e o fundo das demais áreas permanece contínuo. A imagem `img/android-futurista.png` foi enviada pelo estudante e é usada como ilustração decorativa de tecnologia, não como registro de equipamento ou serviço real da FIAP. Todos esses efeitos são feitos na folha CSS compartilhada.
+As áreas foram informadas pela equipe e não indicam as tecnologias usadas pelo site. As fotos foram fornecidas pelo grupo. A Roboto local inclui sua licença em `fonts/roboto-ofl.txt`.
 
 ## Fontes
 
-- [FIAP — Contato da graduação](https://www.fiap.com.br/graduacao/contato/)
-- [FIAP — Campus Paulista, 7 ago. 2012](https://www.fiap.com.br/2012/08/07/campus-fiap-paulista/)
-- [FIAP — Ampliação do campus, 28 jun. 2012](https://www.fiap.com.br/imprensa/fiap-inaugura-novo-campus-na-avenida-paulista/)
-- [Plano de Garantia de Acessibilidade da FIAP](https://www.fiap.com.br/wp-content/themes/fiap2016/documents/fiap/informacoes-academicas/politicas-institucionais/PLANO%20DE%20GARANTIA%20DE%20ACESSIBILIDADE.pdf)
+- [FIAP — Contato da graduação](https://www.fiap.com.br/graduacao/contato/): endereço e horário de atendimento.
+- [FIAP — Campus Paulista, 7 ago. 2012](https://www.fiap.com.br/2012/08/07/campus-fiap-paulista/): informações históricas sobre espaços.
+- [FIAP — Ampliação do campus, 28 jun. 2012](https://www.fiap.com.br/imprensa/fiap-inaugura-novo-campus-na-avenida-paulista/): informações históricas sobre laboratórios, auditório e convivência.
+- [Plano de Garantia de Acessibilidade da FIAP](https://www.fiap.com.br/wp-content/themes/fiap2016/documents/fiap/informacoes-academicas/politicas-institucionais/PLANO%20DE%20GARANTIA%20DE%20ACESSIBILIDADE.pdf): diretrizes institucionais de 2020.
 
 ## Entrega
 
-Este repositório contém uma cópia limpa do site; o histórico do repositório anterior não foi reescrito. A atividade exige pelo menos 20 commits reais e dois commits feitos por cada integrante em sua própria conta. A importação dos arquivos não substitui as contribuições dos colegas: cada pessoa deve registrar mudanças substantivas com sua conta, sem fragmentar alterações artificialmente. Por ser privado, a rubrica também pede conceder acesso ao professor `alecarlosjesus`; confirme essa permissão antes da entrega. O líder envia `cp2.txt` no Teams.
+`cp2.txt` contém uma linha por integrante e o link do repositório. Conforme o enunciado, o líder envia o arquivo no Teams. A atividade também exige pelo menos 20 commits reais e dois commits por integrante, feitos pela própria conta de cada estudante. Não reatribua commits nem fragmente mudanças artificialmente. A permissão do professor indicada no enunciado continua pendente de autorização.
