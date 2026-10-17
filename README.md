@@ -56,6 +56,8 @@ conecta-campus-fiap-html-css/
 
 As áreas acima foram informadas pelo grupo e não representam tecnologias usadas pelo site. Endereço e horário vêm do contato oficial da FIAP; alguns dados de espaços são de publicações de 2012 e estão marcados como históricos. As fotos dos espaços e da equipe foram fornecidas pelo grupo. A Roboto local inclui a licença em `fonts/roboto-ofl.txt`.
 
+A abertura combina três fotografias em um mosaico com larguras e opacidades diferentes. Os cantos alternam entre retos e arredondados, e o fundo das demais áreas permanece contínuo. A imagem `img/android-futurista.png` foi enviada pelo estudante e é usada como ilustração decorativa de tecnologia, não como registro de equipamento ou serviço real da FIAP. Todos esses efeitos são feitos na folha CSS compartilhada.
+
 ## Fontes
 
 - [FIAP — Contato da graduação](https://www.fiap.com.br/graduacao/contato/)
