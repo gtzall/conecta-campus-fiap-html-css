@@ -18,6 +18,10 @@ A página inicial usa a imagem panorâmica composta enviada pelo grupo como fund
 - `locais.html` — diretório com categoria, localização, informação útil, imagem e link.
 - `detalhes.html` — informações sobre os espaços, acessibilidade e fontes, com atalhos internos.
 - `integrantes.html` — fotos, RMs, turma e perfis sociais.
+  
+## Como visualizar localmente
+
+O projeto não requer instalação, servidor ou dependências. Clone ou baixe o repositório. 
 
 ## Capturas
 
