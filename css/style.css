@@ -253,138 +253,115 @@ h1 span, h2 span {
 }
 /* PÁGINA INÍCIO */
 .page-home .hero {
-    position: relative;
-    isolation: isolate;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
     align-items: center;
-    overflow: hidden;
-    min-height: clamp(31rem, 50vw, 39rem);
     margin-top: 1.2rem;
     margin-bottom: 2.25rem;
-    border-radius: 2.4rem 0 2.4rem 0;
-    background: var(--color-background);
-}
-.page-home .hero::before {
-    content: "CONECTA / CAMPUS / 2026";
-    position: absolute;
-    z-index: 4;
-    top: 3rem;
-    bottom: 3rem;
-    left: 1.2rem;
-    display: flex;
-    align-items: center;
-    padding-left: 0.65rem;
-    border-left: 1px solid rgba(197, 3, 55, 0.72);
-    color: var(--color-link);
-    font-size: 0.62rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    line-height: 1.8;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-}
-.page-home .hero::after {
-    content: "+  +  +";
-    position: absolute;
-    z-index: 4;
-    top: 1.2rem;
-    right: 1.2rem;
-    color: rgba(255, 92, 133, 0.75);
-    font-size: 0.9rem;
-    letter-spacing: 0.5em;
-}
-.hero-mosaic {
-    position: absolute;
-    z-index: 0;
-    inset: 0;
-    display: grid;
-    grid-template-columns: 0.95fr 1.35fr 0.7fr;
-    gap: 0.3rem;
-    background: var(--color-background);
-}
-.hero-panel {
-    width: 100%;
-    height: 100%;
-    min-width: 0;
-    object-fit: cover;
-}
-.hero-panel-one {
-    object-position: 52% center;
-    opacity: 0.56;
-}
-.hero-panel-two {
-    object-position: 48% 34%;
-    opacity: 0.82;
-    border-radius: 0 0 2.2rem 0;
-}
-.hero-panel-three {
-    object-position: 54% center;
-    opacity: 0.43;
-}
-.hero-shade {
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(2, 6, 14, 0.82), rgba(2, 6, 14, 0.51) 47%, rgba(2, 6, 14, 0.64)), linear-gradient(0deg, rgba(2, 6, 14, 0.38), transparent 58%), linear-gradient(125deg, rgba(197, 3, 55, 0.25), transparent 60%);
+    padding-block: 2rem;
 }
 .hero-copy {
-    position: relative;
-    z-index: 2;
-    width: 74%;
-    max-width: 57rem;
-    padding: clamp(3rem, 6vw, 5.5rem) 9rem clamp(3rem, 6vw, 5.5rem) clamp(4.5rem, 8vw, 7rem);
+    max-width: 39rem;
+    padding-block: clamp(1rem, 3vw, 2.5rem);
     animation: rise-in 320ms ease-out both;
 }
-.page-home .hero h1 {
-    max-width: 12ch;
-    font-size: clamp(3.2rem, 6.4vw, 6.25rem);
-    line-height: 0.94;
-    text-shadow: 0 2px 1.2rem rgba(2, 6, 14, 0.6);
-}
-.hero-description {
-    max-width: 31rem;
-    margin-top: 1.4rem;
-    color: var(--color-muted);
-    font-size: 1.1rem;
-    text-shadow: 0 1px 0.8rem rgba(2, 6, 14, 0.65);
-}
-.hero-caption {
-    max-width: 31rem;
-    margin-top: 1rem;
-    color: rgba(245, 245, 247, 0.78);
-    font-size: 0.72rem;
-}
-.hero-android {
-    position: absolute;
-    z-index: 1;
-    right: 0.5rem;
-    bottom: -1rem;
-    width: min(34%, 24rem);
+.hero-photo {
+    position: relative;
+    min-height: 30rem;
     margin: 0;
+    overflow: hidden;
+    border-radius: 0 2.5rem 0 2.5rem;
+    background: rgba(197, 3, 55, 0.12);
+}
+.hero-photo::before {
+    content: "FIAP / PAULISTA";
+    position: absolute;
+    z-index: 2;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.35rem 0.6rem;
+    background: rgba(2, 6, 14, 0.66);
+    color: var(--color-text);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+}
+.hero-photo::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(2, 6, 14, 0.56), transparent 48%), linear-gradient(125deg, rgba(197, 3, 55, 0.18), transparent 60%);
+    content: "";
     pointer-events: none;
 }
-.android-image {
-    width: 100%;
-    height: auto;
-    opacity: 0.58;
-    object-fit: contain;
-    mix-blend-mode: screen;
-    filter: drop-shadow(0 0 1.5rem rgba(197, 3, 55, 0.38));
-}
-.hero-android figcaption {
+.hero-photo img {
     position: absolute;
-    right: 0.25rem;
-    bottom: 0.9rem;
-    max-width: 13rem;
-    padding: 0.25rem 0.45rem;
-    background: rgba(2, 6, 14, 0.62);
-    color: rgba(245, 245, 247, 0.72);
-    font-size: 0.58rem;
-    line-height: 1.35;
-    text-align: right;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 32%;
+    opacity: 0.88;
+    filter: saturate(0.82) brightness(0.82);
 }
-.hero-android figcaption span {
+.hero-photo figcaption {
+    position: absolute;
+    z-index: 2;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 0 0.7rem 0 0.7rem;
+    background: rgba(2, 6, 14, 0.72);
+    color: rgba(245, 245, 247, 0.88);
+    font-size: 0.68rem;
+}
+.hero-photo figcaption span {
     color: var(--color-link);
+}
+.page-home .hero h1 {
+    max-width: 10ch;
+    font-size: clamp(3.2rem, 6vw, 5.8rem);
+    line-height: 0.94;
+}
+.hero-description {
+    max-width: 29rem;
+    margin-top: 1.2rem;
+    color: var(--color-muted);
+    font-size: 1.05rem;
+}
+.mascot-guide {
+    display: grid;
+    grid-template-columns: 14rem minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    max-width: 50rem;
+    margin: 1.5rem auto 2rem;
+    padding-block: 0.5rem;
+}
+.mascot-figure {
+    width: 14rem;
+    aspect-ratio: 1;
+    margin: 0;
+}
+.mascot-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.95;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 1.2rem rgba(197, 3, 55, 0.32));
+}
+.mascot-copy h2 {
+    margin-block: 0.35rem 0.6rem;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+.mascot-copy > p:not(.eyebrow) {
+    max-width: 34rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+.mascot-copy .text-link {
+    margin-top: 0.7rem;
 }
 .facts-list {
     display: flex;
@@ -410,48 +387,19 @@ h1 span, h2 span {
     margin-left: auto;
     font-size: 0.8rem;
 }
-.place-grid-home {
+.home-directory {
     display: grid;
-    grid-template-columns: minmax(0, 1.18fr) minmax(20rem, 0.82fr);
-    grid-template-rows: repeat(2, minmax(10rem, auto));
-    gap: 1.6rem clamp(2rem, 5vw, 4.5rem);
-    align-items: center;
-}
-.place-grid-home .place-card {
-    overflow: visible;
-    border: 0;
-    background: transparent;
-}
-.place-grid-home .place-card:first-child {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-}
-.place-grid-home .place-card:not(:first-child) {
-    display: grid;
-    grid-template-columns: minmax(8rem, 0.8fr) minmax(0, 1.2fr);
-    gap: 1.2rem;
-    align-items: center;
-}
-.place-grid-home .place-card:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1;
-}
-.place-grid-home .place-card:nth-child(3) {
-    grid-column: 2;
-    grid-row: 2;
-}
-.place-grid-home .place-card:not(:first-child) .card-image-link {
-    grid-column: 1;
-    grid-row: 1;
-}
-.place-grid-home .place-card:not(:first-child) .card-body {
-    grid-column: 2;
-    grid-row: 1;
-    padding: 0;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    align-items: stretch;
 }
 .address-display {
-    display: block;
-    padding: 1.7rem 1.4rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 18rem;
+    padding: 1.7rem;
     border-radius: 2rem 0 2rem 0;
     background: linear-gradient(140deg, rgba(197, 3, 55, 0.18), rgba(197, 3, 55, 0.035) 68%, transparent);
     color: var(--color-text);
@@ -459,7 +407,7 @@ h1 span, h2 span {
 }
 .address-label {
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--color-muted);
     font-size: 0.72rem;
     letter-spacing: 0.08em;
@@ -482,14 +430,61 @@ h1 span, h2 span {
 }
 .address-street {
     display: block;
-    margin-top: 1.2rem;
+    margin-top: 0.8rem;
     font-size: clamp(1.4rem, 2.8vw, 2rem);
     font-weight: 400;
     letter-spacing: -0.025em;
 }
+.address-detail {
+    margin-top: 0.65rem;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+}
 .address-display:hover .address-street {
     text-decoration: underline;
     text-underline-offset: 0.2em;
+}
+.home-space-links {
+    display: grid;
+    align-content: center;
+    list-style: none;
+}
+.home-space-link {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
+    gap: 0.9rem;
+    align-items: center;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+    text-decoration: none;
+}
+.home-space-index {
+    color: rgba(255, 92, 133, 0.78);
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 300;
+}
+.home-space-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.home-space-meta > span {
+    color: var(--color-muted);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+}
+.home-space-meta strong {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.home-space-arrow {
+    color: var(--color-link);
+}
+.home-space-link:hover .home-space-meta strong {
+    color: var(--color-link);
 }
 /* LOCAIS */
 .card-image-link {
@@ -650,6 +645,38 @@ h1 span, h2 span {
     padding-top: 0.4rem;
     border-top: 0;
 }
+.network-content {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    align-items: center;
+}
+.network-copy h2 {
+    max-width: 13ch;
+    margin-block: 0.6rem 1rem;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+.network-copy > p:not(.eyebrow) {
+    max-width: 34rem;
+    margin-bottom: 1rem;
+    color: var(--color-muted);
+}
+.network-figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0 2rem 0 2rem;
+    background: rgba(197, 3, 55, 0.08);
+}
+.network-figure img {
+    width: 100%;
+    height: auto;
+    opacity: 0.92;
+}
+.network-figure figcaption {
+    padding: 0.55rem 0.75rem;
+    color: var(--color-muted);
+    font-size: 0.68rem;
+}
 /* DETALHES */
 .detail-index {
     display: flex;
@@ -678,18 +705,14 @@ h1 span, h2 span {
 .detail-index + .detail-feature {
     padding-top: 2.5rem;
 }
-.detail-feature, .detail-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: 2rem 4rem;
-    align-items: start;
+.detail-feature {
+    max-width: 64rem;
+    margin-inline: auto;
 }
-.detail-image {
-    width: 100%;
-    height: auto;
-}
-.detail-image-frame .image-credit {
-    padding: 0.7rem 0 0.1rem;
+.detail-feature .detail-copy {
+    max-width: 52rem;
+    padding: 0.75rem 0 0.75rem 1.25rem;
+    border-left: 2px solid rgba(197, 3, 55, 0.48);
 }
 .detail-copy > p:not(.card-kicker) {
     margin-top: 1rem;
@@ -702,23 +725,26 @@ h1 span, h2 span {
     margin-block: 1.25rem 0.65rem;
     font-size: 1.15rem;
 }
+.detail-row {
+    max-width: 62rem;
+    margin-inline: auto;
+}
+.detail-row > div {
+    max-width: 52rem;
+    padding-block: 0.5rem;
+}
+#auditorio .detail-row > div {
+    margin-left: auto;
+}
+#convivencia .detail-row > div {
+    margin-left: 6%;
+}
 .detail-row h2 {
     margin-bottom: 1rem;
 }
 .detail-row p:not(.eyebrow) {
     margin-block: 0.8rem;
     color: var(--color-muted);
-}
-.detail-space-photo {
-    width: 100%;
-    height: auto;
-    border-radius: 0 2rem 0 2rem;
-}
-.detail-row:nth-of-type(even) .detail-space-photo {
-    border-radius: 2rem 0 2rem 0;
-}
-.detail-row figure .image-credit {
-    padding-top: 0.55rem;
 }
 .check-list {
     padding-left: 1.3rem;
@@ -892,25 +918,16 @@ h1 span, h2 span {
         width: calc(100% - 2rem);
     }
     .page-home .hero {
-        min-height: 35rem;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        min-height: 0;
         margin-top: 0.75rem;
         margin-bottom: 1.5rem;
-    }
-    .page-home .hero::before {
-        top: 1.15rem;
-        bottom: auto;
-        left: 1.1rem;
-        display: block;
-        padding: 0.3rem 0 0;
-        border: 0;
-        border-top: 1px solid rgba(197, 3, 55, 0.72);
-        line-height: 1.2;
-        writing-mode: horizontal-tb;
-        transform: none;
+        padding-block: 1rem;
     }
     .hero-copy {
-        width: 100%;
-        padding: 4rem 1.2rem 10rem;
+        max-width: 36rem;
+        padding: 0.75rem 0 0;
     }
     .page-home .hero h1 {
         max-width: 10ch;
@@ -920,19 +937,28 @@ h1 span, h2 span {
         max-width: 23rem;
         font-size: 1rem;
     }
-    .hero-android {
-        right: 0.25rem;
-        bottom: -0.5rem;
-        width: 10.5rem;
+    .hero-photo {
+        min-height: 19rem;
     }
-    .android-image {
-        opacity: 0.28;
+    .mascot-guide {
+        grid-template-columns: 6.5rem minmax(0, 1fr);
+        gap: 1rem;
+        margin-block: 1rem 1.5rem;
+        padding: 0.9rem;
     }
-    .hero-android figcaption {
-        right: 0.25rem;
-        bottom: 0.7rem;
-        max-width: 9rem;
-        font-size: 0.62rem;
+    .mascot-figure {
+        width: 6.5rem;
+    }
+    .mascot-copy h2 {
+        font-size: 1.4rem;
+    }
+    .home-directory {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .address-display {
+        min-height: 14rem;
+        padding: 1.2rem;
     }
     .page-home .facts-list {
         gap: 1rem 1.6rem;
@@ -940,22 +966,10 @@ h1 span, h2 span {
     .page-home .facts-list .text-link {
         margin-left: 0;
     }
-    .place-grid-home {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 1.4rem;
-    }
-    .place-grid-home .place-card:first-child, .place-grid-home .place-card:nth-child(2),     .place-grid-home .place-card:nth-child(3) {
-        grid-column: 1;
-        grid-row: auto;
-    }
-    .address-display {
-        padding-block: 0.75rem 1rem;
-    }
     .address-number {
         font-size: clamp(5rem, 24vw, 7rem);
     }
-    .page-locations .page-intro, .page-details .page-intro, .detail-feature,     .accessibility-content {
+    .page-locations .page-intro, .page-details .page-intro, .accessibility-content,     .network-content {
         grid-template-columns: 1fr;
         gap: 1.2rem;
     }
@@ -984,8 +998,11 @@ h1 span, h2 span {
         height: 12rem;
     }
     .detail-row {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        max-width: 100%;
+    }
+    .detail-row > div, #auditorio .detail-row > div, #convivencia .detail-row > div {
+        max-width: 100%;
+        margin-left: 0;
     }
     .page-team .member-card {
         grid-template-columns: 1.5rem minmax(5rem, 6rem) minmax(0, 1fr);
