@@ -10,7 +10,7 @@
 
 O Conecta Campus é um guia estudantil da unidade FIAP Paulista, com informações sobre espaços, acessibilidade e integrantes. O site é estático e feito somente com **HTML e CSS**: não usa Python, JavaScript, frameworks, backend ou banco de dados.
 
-A página inicial usa fotos locais em um mosaico de diferentes proporções e opacidades. O androide é uma ilustração decorativa enviada pelo grupo, não um equipamento real da FIAP. Algumas bordas são arredondadas e outras retas, mantendo o fundo contínuo.
+A página inicial usa uma foto da unidade; o androide enviado pelo grupo aparece separado como mascote ilustrado. A foto nova do coworking aparece somente na lista de locais, e a página de detalhes não repete as imagens. No fim da lista há uma referência enviada pelo grupo sobre outras cidades atendidas pela FIAP.
 
 ## Páginas
 
