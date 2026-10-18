@@ -717,6 +717,15 @@ h1 span, h2 span {
 .detail-index + .detail-feature {
     padding-top: 2.5rem;
 }
+/* DESTINOS DOS LINKS INTERNOS */
+.page-details main > section[id] {
+    scroll-margin-top: 1.5rem;
+}
+
+.page-details main > section[id]:target {
+    box-shadow: inset 4px 0 0 var(--color-link);
+}
+
 .detail-feature {
     max-width: 64rem;
     margin-inline: auto;
