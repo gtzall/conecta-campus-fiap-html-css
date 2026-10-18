@@ -252,25 +252,40 @@ h1 span, h2 span {
     font-size: 1.05rem;
 }
 /* PÁGINA INÍCIO */
+.page-home .site-header {
+    position: absolute;
+    z-index: 5;
+    inset: 0 0 auto;
+}
+.page-home .header-content {
+    min-height: 5rem;
+    padding-block: 0.9rem;
+}
+.page-home .skip-link {
+    z-index: 10;
+}
 .page-home .hero {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     max-width: none;
-    min-height: clamp(30rem, 65vh, 42rem);
-    margin: 1.2rem 0 2.25rem;
-    padding: clamp(3rem, 8vw, 6.5rem) max(1.5rem, calc((100vw - var(--container-width)) / 2));
+    min-height: clamp(36rem, 56.3vw, 58rem);
+    margin: 0;
+    padding: 7rem max(2rem, calc((100vw - var(--container-width)) / 2 + 2rem)) 5rem;
     overflow: hidden;
-    border-radius: 0 2.5rem 0 2.5rem;
     isolation: isolate;
 }
 .hero-copy {
     position: relative;
     z-index: 2;
-    max-width: 39rem;
-    padding-block: clamp(1rem, 3vw, 2.5rem);
+    width: min(42rem, 55%);
+    padding-block: 1rem;
+    text-shadow: 0 2px 24px rgba(2, 6, 14, 0.6);
     animation: rise-in 320ms ease-out both;
+}
+.hero-copy .eyebrow {
+    margin-bottom: 1.1rem;
 }
 .hero-photo {
     position: absolute;
@@ -289,7 +304,7 @@ h1 span, h2 span {
     position: absolute;
     z-index: 1;
     inset: 0;
-    background: linear-gradient(90deg, rgba(2, 6, 14, 0.94) 0%, rgba(2, 6, 14, 0.78) 35%, rgba(2, 6, 14, 0.42) 72%, rgba(2, 6, 14, 0.52) 100%), linear-gradient(0deg, rgba(2, 6, 14, 0.48), transparent 48%), linear-gradient(125deg, rgba(197, 3, 55, 0.16), transparent 62%);
+    background: linear-gradient(90deg, rgba(2, 6, 14, 0.58), rgba(2, 6, 14, 0.48) 36%, transparent 68%), linear-gradient(0deg, var(--color-background), transparent 22%);
     content: "";
     pointer-events: none;
 }
@@ -300,33 +315,32 @@ h1 span, h2 span {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 32%;
-    opacity: 0.92;
-    filter: saturate(0.78) brightness(0.78);
+    object-position: center top;
 }
 .hero-photo figcaption {
     position: absolute;
     z-index: 2;
-    right: 1rem;
-    bottom: 1rem;
+    right: max(2rem, calc((100vw - var(--container-width)) / 2));
+    bottom: 1.5rem;
     padding: 0.35rem 0.6rem;
-    border-radius: 0 0.7rem 0 0.7rem;
-    background: rgba(2, 6, 14, 0.72);
-    color: rgba(245, 245, 247, 0.88);
+    color: var(--color-muted);
     font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 .hero-photo figcaption span {
     color: var(--color-link);
 }
 .page-home .hero h1 {
-    max-width: 10ch;
-    font-size: clamp(3.2rem, 6vw, 5.8rem);
-    line-height: 0.94;
+    max-width: none;
+    font-size: clamp(3.1rem, 5.2vw, 5.6rem);
+    line-height: 1.02;
+    font-weight: 600;
 }
 .hero-description {
-    max-width: 29rem;
-    margin-top: 1.2rem;
-    color: var(--color-muted);
+    max-width: 26rem;
+    margin-top: 1.5rem;
+    color: #e0e4eb;
     font-size: 1.05rem;
 }
 .facts-list {
@@ -915,19 +929,37 @@ h1 span, h2 span {
     .container {
         width: calc(100% - 2rem);
     }
+    .page-home .header-content {
+        gap: 0.8rem;
+        padding-block: 1.1rem;
+    }
+    .page-home .header-content nav {
+        width: 100%;
+    }
+    .page-home .nav-list {
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+    .page-home .campus-tag {
+        display: none;
+    }
+    .page-home .site-header {
+        background: linear-gradient(var(--color-background), rgba(2, 6, 14, 0.8) 75%, transparent);
+    }
     .page-home .hero {
-        min-height: clamp(29rem, 68vh, 36rem);
-        margin-top: 0.75rem;
-        margin-bottom: 1.5rem;
-        padding: 2.25rem 1rem;
+        min-height: 42rem;
+        margin: 0;
+        padding: 10rem 1.5rem 6rem;
+        align-items: flex-end;
     }
     .hero-copy {
-        max-width: 32rem;
+        width: 100%;
+        max-width: 31rem;
         padding: 0.75rem 0;
     }
     .page-home .hero h1 {
-        max-width: 10ch;
-        font-size: clamp(3rem, 12vw, 4.4rem);
+        max-width: none;
+        font-size: clamp(2.6rem, 9.5vw, 4.2rem);
     }
     .hero-description {
         max-width: 23rem;
@@ -935,6 +967,16 @@ h1 span, h2 span {
     }
     .hero-photo {
         min-height: 0;
+    }
+    .hero-photo img {
+        object-position: 62% top;
+    }
+    .hero-photo::after {
+        background: linear-gradient(0deg, var(--color-background), rgba(2, 6, 14, 0.8) 32%, rgba(2, 6, 14, 0.15) 80%);
+    }
+    .hero-photo figcaption {
+        right: 1.5rem;
+        bottom: 1.5rem;
     }
     .home-directory {
         grid-template-columns: 1fr;
